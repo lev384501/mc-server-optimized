@@ -1,0 +1,25 @@
+{
+  "name": "Minecraft Server",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+  "features": {
+    "ghcr.io/devcontainers/features/java:1": {
+      "version": "17",
+      "installMaven": false,
+      "installGradle": false
+    }
+  },
+  "forwardPorts": [25565],
+  "portsAttributes": {
+    "25565": {
+      "protocol": "tcp",
+      "label": "Minecraft",
+      "onAutoForward": "notify"
+    }
+  },
+  "postCreateCommand": "echo 'Minecraft server environment ready!'",
+  "customizations": {
+    "vscode": {
+      "extensions": []
+    }
+  }
+}
